@@ -61,27 +61,15 @@ int main()
 #include <stdio.h>
 int main()
 {
-	int a,b,temp;
+	int a,b,i,ans=1;
 	scanf("%d%d",&a,&b);
-	if(b>a)
+	
+	for(i=1;i<=b;i++)
 	{
-		for(int i=1;i<=a;i++)
-		{
-			if(a%i==0 && b%i==0) 
-			temp=i;
-		}
+		if(a%i==0 && b%i==0)
+		ans=i;
 	}
-	else if(b<a)
-	{
-		for(int i=1;i<=b;i++)
-		{
-			if(a%i==0 && b%i==0) 
-			temp=i;
-		}
-	}
-	a=a/temp;
-	b=b/temp;
-	printf("%d %d\n",a,b);
+	printf("%d %d\n",a/ans,b/ans);
 }
 ```
 ## 第六題程式碼
