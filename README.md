@@ -75,6 +75,7 @@ int main()
 ```
 ## 2021/03/05
 ## 第一題程式碼
+### 利用 int *p 來改變 n1變數的值
 ```C
 #include <stdio.h>
 int main()
@@ -88,6 +89,7 @@ int main()
 }
 ```
 ## 第二題程式碼
+### 利用 int *p2 來改變 n3 變數的值
 ```C
 #include <stdio.h>
 int main()
@@ -105,6 +107,7 @@ int main()
 }
 ```
 ## 第三題程式碼
+### 利用 p2=p 讓口袋的address位址換了一張, 所以 *p2=400 就會換到其他地方送400元
 ```C
 #include <stdio.h>
 int main()
