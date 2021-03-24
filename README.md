@@ -213,6 +213,7 @@ int main()
 ```
 ## week04 2021/03/19
 ## 第一題程式碼
+###  示範 struct POINT{ float x, y; }; 的宣告定義
 ```C
 #include <stdio.h>
 
@@ -226,6 +227,7 @@ int main()
 }
 ```
 ## 第二題程式碼
+###  C Tutor 及 CodeBlocks 示範 struct POINT a={4.1, 3.2}; 並利用 a.x 及 a.y 印出來
 ```C
 #include <stdio.h>
 
@@ -240,6 +242,7 @@ int main()
 }
 ```
 ## 第三題程式碼
+### C Tutor 及 CodeBlocks 示範, 接續上題, 再利用 a.x 及 a.y 來改變裡面的值
 ```C
 #include <stdio.h>
 
@@ -258,6 +261,7 @@ int main()
 }
 ```
 ## 第四題程式碼
+###  C Tutor 及 CodeBlocks(配合printf) 示範 外面的global全域變數 會初始值, 裡面的 local區域變數會是亂碼
 ```C
 #include <stdio.h>
 
@@ -281,6 +285,7 @@ int main()
 }
 ```
 ## 第五題程式碼
+###  C Tutor 及 CodeBlocks(配合printf) 示範, (結構)有個陣列、有個指標, 使用 p->x, p->y, p->z 取用到指標指到的值
 ```C
 #include <stdio.h>
 struct POINT {
