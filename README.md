@@ -446,7 +446,18 @@ int main()
 ```
 ## 第五題程式碼
 ```C
-
+#include <stdio.h>
+char line[2000];
+int main()
+{//step01:Input 一次一整行很多一整行
+	for( int t=0; gets(line) ; t++){
+		//step02: Ouput
+		if(t>0) printf("\n");
+		printf("blahblahblah\n");
+		printf("blahblahblah\n");
+		printf("blahblahblah\n");
+	}
+}
 ```
 ## 第六題程式碼
 ```C
