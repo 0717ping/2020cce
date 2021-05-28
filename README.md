@@ -633,12 +633,44 @@ void draw(){
 ## 第五題程式碼
 ### 
 ```C
-
+void setup(){//只做一次
+	size(1004,400);
+	textFont( createFont("標楷體",50);
+}
+void draw(){
+	background(98,133,255);
+	textSize(50);
+	int h = hour();//小時
+	int m = minute();//分鐘
+	int s = second();//秒
+	fill(255,0,0);//填充墨水的色彩
+	text( "Now:" + h + ":" + m + ":" + s ,100,100);//現在時間
+	int total = h*60*60 + m*60 + s;//總秒數
+	text(	"總秒數:" + total, 100,200);
+}
 ```
 ## 第六題程式碼
 ### 
 ```C
-
+void setup(){//只做一次
+	size(1004,400);
+	textFont( createFont("標楷體",50);
+}
+void draw(){
+	background(98,133,255);
+	textSize(50);
+	int h = hour();//小時
+	int m = minute();//分鐘
+	int s = second();//秒
+	fill(255,0,0);//填充墨水的色彩
+	text( "Now:" + h + ":" + m + ":" + s ,100,100);//現在時間
+	int total = h*60*60 + m*60 + s;//總秒數
+	int total2=12*60*60 + 0*60 + 0;//目標時間的總秒數
+	text(	"總秒數:" + total, 100,200);
+	int ans = total2-total;
+	int hh = ans/60/60%60, mm = ans/60%60, ss = ans%60;
+	text(	"還剩下:" + hh + ":" + mm + ":" + ss, 100,300);
+}
 ```
 ## week14 2021/05/28
 ## 第一題程式碼
@@ -654,7 +686,21 @@ void setup(){//設定 只做一次
 ## 第二題程式碼
 ### 
 ```C
-
+//Q1: 數字有小數點不好 A:整數無條件捨去
+//Q2: 沒有互動 A:用mousePressed互動
+void setup(){
+  size(300,200);
+  textSize(30);
+}
+int ans=0;
+void draw(){//畫圖,每秒60次 60fps
+  background(98,133,255);
+  //int ans = (int)random(60);//強制轉型
+  text( ans, 30, 30);//跳太快了
+}
+void mousePressed(){//mouse按下去才做亂數
+   ans = (int)random(60);
+}
 ```
 ## 第三題程式碼
 ### 
