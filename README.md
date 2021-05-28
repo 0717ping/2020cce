@@ -580,3 +580,42 @@ int main()
 	}
 }
 ```
+## week13 2021/05/21
+## 第一題程式碼
+### 設定背景顏色
+```
+size(1004,400);
+background(98,133,255);
+```
+## 第二題程式碼
+### 用if(mousePressed) 及else來切換背景
+```C
+void setup(){
+	size(1004,400);
+}
+void draw(){
+	if(mousePressed)background(98,133,255);
+	else background(251,249,157);
+}
+```
+## 第三題程式碼
+### 
+```C
+
+```
+## 第四題程式碼
+### 
+```C
+
+```
+## week14 2021/05/28
+## 第一題程式碼
+### 
+```C
+void setup(){//設定 只做一次
+   size(300,200);
+   float ans = random(60);//亂數取<60的數
+   textSize(30);
+   text( ans, 0, 30);
+}
+```
