@@ -674,7 +674,7 @@ void draw(){
 ```
 ## week14 2021/05/28
 ## 第一題程式碼
-### 
+### 用亂數random(60)取出小於60的數
 ```C
 void setup(){//設定 只做一次
    size(300,200);
@@ -684,7 +684,7 @@ void setup(){//設定 只做一次
 }
 ```
 ## 第二題程式碼
-### 
+### 利用mosuePressed()來改亂數
 ```C
 //Q1: 數字有小數點不好 A:整數無條件捨去
 //Q2: 沒有互動 A:用mousePressed互動
@@ -703,7 +703,7 @@ void mousePressed(){//mouse按下去才做亂數
 }
 ```
 ## 第三題程式碼
-### 
+### 亂數洗牌
 ```C
 //int a[]={1,2,3,4,5,6,7,8,9,10};//C,C++
 int []a = {1,2,3,4,5,6,7,8,9,10};//Java
@@ -724,7 +724,51 @@ void mousePressed(){
 }//交換,行數太擠,所以塞成一行,中間是分號
 ```
 ## 第四題程式碼
-### 
+### 大樂透拿前面6個數字當成中獎號碼
 ```C
-
+//int a[]={1,2,3,4,5,6,7,8,9,10,...寫49很累
+int []a = new int[49];//Java的陣列宣告
+void setup(){
+  size(400,200);
+  textSize(30);
+  for(int i=0; i<49; i++) a[i] = i+1;//人類:1
+}                       //電腦:0
+void draw(){
+  background(98,133,255);
+  for(int i=0; i<6; i++){//49只秀6個數
+     text( a[i], i*50, 100); 
+  }//大樂透 抽獎時,會掉下球, 49球挑6球
+}
+void mousePressed(){
+  for(int i=0; i<10000; i++){
+     int i1=(int) random(49), i2=(int) random(49);
+     int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;
+  }
+}
+```
+## 第五題程式碼
+### 大樂透的球
+```C
+int []a = new int[49];//Java的陣列宣告
+void setup(){
+  size(400,200);
+  textSize(30);
+  for(int i=0; i<49; i++) a[i] = i+1;//人類:1 丟入號碼球
+  for(int i=0; i<10000; i++){
+     int i1=(int) random(49), i2=(int) random(49);
+     int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;
+  }
+}
+int N=0;
+void draw(){
+  background(98,133,255);
+  for(int i=0; i<N; i++){//49只秀6個數
+     fill(255); ellipse(50+i*50, 100, 40, 40);//白球
+     textAlign(CENTER,CENTER);//文字對齊 中,中
+     fill(0); text( a[i], 50+i*50, 100);//黑字
+  }
+}
+void mousePressed(){
+  N++;
+}
 ```
