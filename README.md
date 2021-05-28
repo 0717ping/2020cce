@@ -599,11 +599,43 @@ void draw(){
 }
 ```
 ## 第三題程式碼
+### void mousePressed()做按下去的動作
+```C
+void setup(){//只做一次
+	size(1004,400);
+}
+void draw(){//每秒狂做60次
+	if(mousePressed)background(98,133,255);
+	else background(251,249,157);
+	textSize(50);//字的大小設50
+	text(a,100,100);//將a在100100畫出來
+}
+int a=0;//外部變數
+void mousePressed(){//按下去時會呼叫函式
+	a++;
+}
+```
+## 第四題程式碼
+### 顯示垷在的時間
+```C
+void setup(){//只做一次
+	size(1004,400);
+}
+void draw(){
+	background(98,133,255);
+	textSize(50);
+	int h = hour();//小時
+	int m = minute();//分鐘
+	int s = second();//秒
+	text( "Now:" + h + ":" + m + ":" + s ,100,100);
+}//            字串    數  字串   數  字串  數
+```
+## 第五題程式碼
 ### 
 ```C
 
 ```
-## 第四題程式碼
+## 第六題程式碼
 ### 
 ```C
 
@@ -618,4 +650,19 @@ void setup(){//設定 只做一次
    textSize(30);
    text( ans, 0, 30);
 }
+```
+## 第二題程式碼
+### 
+```C
+
+```
+## 第三題程式碼
+### 
+```C
+
+```
+## 第四題程式碼
+### 
+```C
+
 ```
