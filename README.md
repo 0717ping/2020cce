@@ -772,3 +772,103 @@ void mousePressed(){
   N++;
 }
 ```
+## week15 2021/06/04
+## 第一題程式碼
+### 
+```C
+void setup(){
+  size(400,200);
+  textSize(40);
+}
+void draw(){
+  background(98,133,255);
+  int s = second();
+  text( s, 100,100);
+}
+```
+## 第二題程式碼
+### 
+```C
+void setup(){
+  size(400,200);
+  textSize(40);
+}
+void draw(){
+  background(98,133,255);
+  int s = second();
+  //text( 59-s, 100,100);
+  text( 9-s%10, 100,100);
+}
+```
+## 第三題程式碼
+### 
+```C
+//發出聲音,有點難,要用外掛Processing的Sound
+//這裡叫PDE:Processing Developing Environment
+import processing.sound.*;
+SoundFile player;
+//tada.mp3檔, 也可以拉進來這裡
+void setup(){
+  size(400,200);
+  player = new SoundFile( this, "tada.mp3" );
+}
+void draw(){
+  background(98,133,255);
+}
+void mousePressed(){
+  player.play();
+}
+```
+## 第四題程式碼
+### 
+```C
+//從第2步的程式開始增加!!!
+import processing.sound.*;//Step03的程式
+SoundFile player;//Step03的程式
+void setup(){
+  size(400,200);
+  textSize(40);
+  player = new SoundFile( this, "tada.mp3" );
+}//Step03的程式, 記得把tada.mp3也放進來
+void draw(){//每秒60次
+  background(98,133,255);
+  int s = second();
+  //text( 59-s, 100,100);
+  text( 9-s%10 , 100,100);
+  if( 9-s%10 == 0 ) player.play();//Step03的程式
+}//0秒的時候,if()會進去60次
+```
+## 第五題程式碼
+### 
+```C
+//Step03出發做Step05
+import processing.sound.*;
+SoundFile player;
+void setup(){
+   size(400,200);
+   player = new SoundFile( this, "bell.mp3" );
+}//把bell.mp3放進來
+void draw(){
+  background(98,133,255);
+}
+void mousePressed(){//2種:play(),stop()
+  if( player.isPlaying() ){
+    player.stop();
+  }else{
+    player.play();
+  }
+}
+```
+## 第六題程式碼
+### 
+```C
+function setup(){
+  createCanvas(400,200);
+  textSize(40);
+}
+function draw(){
+  background(98,133,255);
+  let s = second();
+  text( s, 100,100);
+}
+```
