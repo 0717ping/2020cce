@@ -1011,7 +1011,7 @@ void draw(){
 ```
 ## week17 2021/06/18
 ## 第一題程式碼
-### 
+### 用String line宣告一個字串變數
 ```C
 void setup(){
     size(400,200);
@@ -1025,7 +1025,7 @@ void draw(){
 }
 ```
 ## 第2題程式碼
-### 
+### line=line把2個字串接起來
 ```C
 void setup(){
     size(400,200);
@@ -1043,7 +1043,7 @@ void mousePressed(){
 }
 ```
 ## 第3題程式碼
-### 
+### keyPressed()
 ```C
 void setup(){
     size(400,200);
@@ -1061,7 +1061,7 @@ void keyPressed(){
 }
 ```
 ## 第4題程式碼
-### 
+### 用 line = line.substring(0, len-1)來讓字串變短
 ```C
 void setup(){
     size(400,200);
@@ -1082,7 +1082,7 @@ void keyPressed(){
 }
 ```
 ## 第5題程式碼
-### 
+### 用len大於0來保護len
 ```C
 void setup(){
     size(400,200);
@@ -1104,7 +1104,7 @@ void keyPressed(){
 }
 ```
 ## 第6題程式碼
-### 
+### 在 keyPressed()加入 if(key==ENTER)
 ```C
 void setup(){
     size(400,200);
@@ -1132,7 +1132,7 @@ void keyPressed(){
 }
 ```
 ## 第7題程式碼
-### 
+### String [] Q再配 int Qi=0
 ```C
 void setup(){
    size(400,200);
